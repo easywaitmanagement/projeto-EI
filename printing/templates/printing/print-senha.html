@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Print Senha</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'printing/css/print-senha.css' %}">
+    <link rel="stylesheet" href="{% static 'general/css/general.css' %}">
+</head>
+<body>
+    <main>
+        <div class="container center">
+            <h1>Print Your Senha</h1>
+            <button class="button" onclick="alert('Printing functionality will be added soon!')">Print</button>
+            <a href="{% url 'session_page' %}" class="button back-button">Back to Session</a>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Nunito&display=swap');
+
+/*Reset*/
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input, button, textarea {
+  font: inherit;
+}
+
+/* Variavéis*/
+:root {
+  --FF: Arial, sans-serif;
+  --FS: clamp(12px, 2.5vh, 1.6rem);
+  /*cores*/
+  /*body*/
+  --Body-BG: rgb(209, 235, 255);
+  --BGcolorOrange: rgb(21, 138, 255);
+  --BGcolorFaded: rgb(209, 235, 255);
+  --BGimg: linear-gradient(to bottom, var(--BGcolorOrange), var(--BGcolorFaded));
+
+  /*header*/
+  --HeaderBG: black;
+  --HeaderColor: white;
+  --NavBG: white;
+  --Hero-BGColor: rgba(51, 178, 51, 0.75);
+  --Hero-Color: black;
+  --ButtonColor: white;
+
+  /*fontes*/
+  --Font-color: black;
+  --Highlight-color: rgb(82, 120, 255);
+  --Link-color: black;
+  --Link-hover: hsla(0, 0%, 0%, 0.6);
+  --Link-Active: rgb(48, 90, 244);
+
+  /*borders*/
+  --Bordercolor: #333;
+  --Border: 2px solid var(--Bordercolor);
+  
+
+  /*padding*/
+  --Padding-TeB: .5rem;
+  --Pading-sides: 4.5%;
+
+  /*margens*/
+  --MARGIN: clamp(1em, 2.5vh, 1.5em) 0;
+}
+
+/*dark mode*/
+@media(preferes-color-scheme: dark) {
+  :root {
+    /*cores*/
+    --Body-BG: rgb(32, 52, 67);
+    --BGcolorOrange: #000;
+    --BGcolorFaded: gray;
+    --HeaderColor: whitesmoke;
+    --NavBG: rgb(20,20,20);
+    --Hero-BGColor: #333;
+    --Hero-Color: #333;
+    --BGimg: linear-gradient(to bottom, var(--BGcolorOrange), var(--BGcolorFaded));
+
+    /*cores fontes*/
+    --ButtonColor: #000;
+    --Link-color: whitesmoke;
+    --Link-hover: orange;
+    --Link-Active: rgb(252, 200, 103);
+    --Font-color: whitesmoke;
+    --Highlight-color: whitesmoke;
+
+    /*borders*/
+    --Border: 2px solid var(--Bordercolor);
+    --Bordercolor: #333;
+  }
+}
+
+/*utilidade*/
+.offscreen {
+  position: absolute;
+  left: 10000px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.center {
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: var(--FS);
+  font-family: var(--FF);
+  background-color: var(--BGcolorOrange);
+  background-image: var(--BGimg);
+}
+
+body {
+  background-color: var(--Body-BG);
+  color: var(--Font-color);
+  min-height: 100vh;
+  max-width: 1400px;
+  margin: 0 auto;
+  border-left: var(--Border);
+  border-right: var(--Border);
+  box-shadow: 0 0 8px var(--Bordercolor);
+}
+
+p {
+  line-height: 1.5;
+}
+
+a:any-link {
+  color: var(--Link-color);
+}
+
+a:hover, a:focus-visible{
+  color: var(--Link-hover);
+}
+
+a:active {
+  color: var(--Link-Active);
+}
+
+/*Main*/
+
+main {
+  width: 100%;
+  max-width: 100%;
+  padding: var(--Padding-TeB), var(--Pading-sides);
+}
+
+/*Footer*/
+
+.footer {
+  position: sticky;
+  bottom: 0;
+  background-color: var(--HeaderBG);
+  color: var(--HeaderColor);
+  padding: var(--Padding-TeB) var(--Pading-sides);
+  text-align: center;
+}

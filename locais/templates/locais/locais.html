@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EasyWait</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'locais/css/locais.css' %}">
+    <link rel="stylesheet" href="{% static 'general/css/general.css' %}">
+  </head>
+
+  <body>
+    <header>
+      <div class="header">
+        <div class="left-section">
+          <img class="logo"src="/static/locais/icons/logo.png">
+        </div>
+        <div class="middle-section">
+          <!--search box/ text box-->
+          <input class = "Searchbar"type="text" placeholder="Search">
+          <button class="pesquisa">
+            <img class="lupa" src="/static/locais/icons/search.svg">
+            <div class="tooltip">Search</div>
+          </button>
+
+          <button class="falar">
+            <img class="mic" src="/static/locais/icons/voice-search-icon.svg">
+            <div class="tooltip">Search with your voice</div>
+          </button>
+        </div>
+
+        <div class="right-section">
+          <div class="notifications">
+            <img class="notifications-icon"src="/static/locais/icons/notifications.svg">
+            <div class="notifications-count">5</div>
+            <div class="tooltip">Notifications</div>
+          </div>
+
+          <img class="userpfp"src="/static/locais/icons/icons8-account-100.png">
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="locais-grid">
+        <!--santa maria-->
+        <div class="local">
+          <!--vertical 1-->
+          <!--link-->
+          <a href="{% url 'session_page' %}?image=/static/locais/images/maria.jpg" target="">
+            <div class="local-div">
+              <img class="local-img" src="/static/locais/images/maria.jpg" alt="santa maria img">
+            </div>
+          </a>
+
+          <!--vertical 2-->
+          <div class="localinfo">
+            <!--horizontal 2-->
+            <div class="localstats">
+              <p class="localtitle">
+                Hospital Santa Maria
+              </p>
+            </div>
+          </div>
+        </div>
+    
+        <!--egas moniz-->
+        <div class="local">
+          <!--vertical 1-->
+          <!--link-->
+          <a href="{% url 'session_page' %}?image=/static/locais/images/egas.jpg" target="">
+            <div class="local-div">
+              <img class="local-img" src="/static/locais/images/egas.jpg" alt="egas img">
+            </div>
+          </a>
+
+          <!--vertical 2-->
+          <div class="localinfo">
+            <!--horizontal 2-->
+            <div class="localstats">
+              <p class="localtitle">
+                Egas Moniz
+              </p>
+            </div>
+          </div>
+        </div>
+      
+    
+        <!--farmacia-->
+        <div class="local">
+          <!--vertical 1-->
+          <!--link-->
+          <a href="{% url 'session_page' %}?image=/static/locais/images/farmacia.jpg" target="">
+            <div class="local-div">
+              <img class="local-img" src="/static/locais/images/farmacia.jpg" alt="farmacia img">
+            </div>
+          </a>
+
+          <!--vertical 2-->
+          <div class="localinfo">
+            <!--horizontal 2-->
+            <div class="localstats">
+              <p class="localtitle">
+                Farmacia
+              </p>
+            </div>
+          </div>
+        </div>
+    
+    
+        <!--cuf-->
+        
+        <div class="local">
+          <!--vertical 1-->
+          <!--link-->
+          <a href="{% url 'session_page' %}?image=/static/locais/images/cuf.jpg" target="">
+            <div class="local-div">
+              <img class="local-img" src="/static/locais/images/cuf.jpg", alt="cuf img">
+            </div>
+          </a>
+          <!--vertical 2-->
+          <div class="localinfo">
+            <!--horizontal 2-->
+            <div class="localstats">
+              <p class="localtitle">
+                Cuf
+              </p>
+            </div>
+          </div>
+        </div>
+        
+    
+        <!--loja do cidadão-->
+        <div class="local">
+          <!--vertical 1-->
+          <!--link-->
+          <a href="{% url 'session_page' %}?image=/static/locais/images/loja.jpg" target="">
+            <div class="local-div">
+              <img class="local-img" src="/static/locais/images/loja.jpg" alt="loja do cidadão img">
+            </div>
+          </a>
+
+          <!--vertical 2-->
+          <div class="localinfo">
+            <!--horizontal 2-->
+            <div class="localstats">
+              <p class="localtitle">
+                Loja do Cidadão
+              </p>
+            </div>
+          </div>
+        </div>
+    
+    
+        <!--santander-->
+        <div class="local">
+          <!--vertical 1-->
+          <!--link-->
+          <a href="{% url 'session_page' %}?image=/static/locais/images/santader.jpg" target="">
+            <div class="local-div">
+              <img class="local-img" src="/static/locais/images/santader.jpeg" alt="santander img">
+            </div>
+          </a>
+          <!--vertical 2-->
+          <div class="localinfo">
+            <!--horizontal 2-->
+            <div class="localstats">
+              <p class="localtitle">
+                Santander
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+
+  </body>
+</html>

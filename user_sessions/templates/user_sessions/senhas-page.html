@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Senhas Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'user_sessions/css/senhas-page.css' %}">
+    <link rel="stylesheet" href="{% static 'general/css/general.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Latest Senha:</h1>
+        {% if latest_senha %}
+            <p class="latest-number">{{ latest_senha }}</p>
+        {% else %}
+            <p>No numbers generated yet.</p>
+        {% endif %}
+        <a href="{% url 'session_page' %}" class="button">Back to Session</a>
+    </div>
+</body>
+</html>

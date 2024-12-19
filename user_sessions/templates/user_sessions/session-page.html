@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Session Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'user_sessions/css/session-page.css' %}">
+    <link rel="stylesheet" href="{% static 'css/general.css' %}">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const imageUrl = urlParams.get('image');
+            const imageName = imageUrl ? imageUrl.split('/').pop().split('.')[0].replace('-', ' ') : 'Unknown';
+            document.getElementById('selected-title').textContent = imageName;
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Selecionou:</h1>
+        <p id="selected-title" class="selected-title">Loading...</p>
+        <div class="image-container">
+            {% if image_url %}
+                <img src="{{ image_url }}" alt="Selected Location" class="responsive-image">
+            {% else %}
+                <p>No image selected.</p>
+            {% endif %}
+        </div>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="button">Gerar Senha</button>
+        </form>
+        {% if generated_number %}
+            <p class="generated-number">Your Generated Number: {{ generated_number }}</p>
+        {% endif %}
+        <div class="button-row">
+            <a href="{% url 'senhas_page' %}" class="button">Ver última senha</a>
+            <a href="{% url 'locais' %}" class="button">Back to Locais</a>
+            <a href="{% url 'print_senha' %}" class="button">Print</a>
+        </div>
+    </div>
+</body>
+</html>
