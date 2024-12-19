@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'accounts/css/welcome-page.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'general/icons/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'general/css/general.css' %}">
+</head>
+<body>
+    <main class="center">
+        <div class="container center">
+            <h1>Welcome to EasyWait</h1>
+            <a href="{% url 'register_user' %}"><button class="button">Sign In</button></a>
+            <a href="{% url 'login_user' %}"><button class="button">Log In</button></a>
+        </div>  
+    </main>
+</body>
+</html>

@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+}
+
+.container button {
+    padding: 0.75rem 1.5rem;
+    margin: 0.5rem;
+    border-radius: 25px;
+    background-color: var(--BGcolorOrange);
+    color: var(--ButtonColor);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.container button:hover {
+    background-color: var(--Highlight-color);
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .container button {
+        padding: 0.5rem 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
