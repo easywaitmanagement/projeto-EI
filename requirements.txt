@@ -1,9 +1,16 @@
+altgraph==0.17.4
 asgiref==3.8.1
 Django==5.1.4
 environ==1.0
 gunicorn==23.0.0
 mysqlclient==2.2.6
 packaging==24.2
+pefile==2023.2.7
+pyinstaller==6.11.1
+pyinstaller-hooks-contrib==2024.10
 python-dotenv==1.0.1
+pywin32==308
+pywin32-ctypes==0.2.3
+setuptools==75.6.0
 sqlparse==0.5.2
 tzdata==2024.2
