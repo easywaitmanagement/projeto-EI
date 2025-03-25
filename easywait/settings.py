@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [".vercel.app"]
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    #armazenamento
+    'cloudinary_storage',
+    'cloudinary',
     'django.contrib.staticfiles',
     #as minhas apps
     'accounts',
@@ -88,11 +91,11 @@ WSGI_APPLICATION = 'easywait.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django_project',
+        'NAME': 'django_db',
         'USER': 'django_user',
         'PASSWORD': 'easywait',
         'HOST': '127.0.0.1',
-        'PORT': '3307',  # Updated port
+        'PORT': '3309',  # Updated port
     }
 }
 
@@ -139,3 +142,16 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Cloudinary Configuration
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dy3a1vqaq',
+    'API_KEY': '212881285136244',
+    'API_SECRET': '6vsbKhnfP3avayUtwPXPHAWV2Kw',
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+# (Optional) Static Files Configuration - if you're also hosting static files with Cloudinary
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
